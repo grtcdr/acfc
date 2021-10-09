@@ -1,7 +1,8 @@
-# acfc
-[Alacritty](https://github.com/alacritty/alacritty) Colors to [Foot](https://codeberg.org/dnkl/foot) Colors
+# acfc 
 
-This tool converts Alacritty's YAML color configuration to Foot's INI color configuration.
+[Alacritty](https://github.com/alacritty/alacritty) Colors to
+[Foot](https://codeberg.org/dnkl/foot) Colors, convert Alacritty's YAML color
+configuration to Foot's INI color configuration.
 
 ## Usage:
 
@@ -14,7 +15,6 @@ acfc.py input.yml
 
 - Input:
 ```yaml
-# Colors (Dracula)
 colors:
   bright:
     black: '#555555'
@@ -47,26 +47,30 @@ colors:
 
 - Output:
 ```ini
+[cursor]
+color=ffffff bbbbbb
+
 [colors]
-alpha=1
 foreground=f8f8f2
 background=1e1f29
-regular0=000000 #black
-regular1=ff5555 #red
-regular2=50fa7b #green
-regular3=f1fa8c #yellow
-regular4=bd93f9 #blue
-regular5=ff79c6 #magenta
-regular6=8be9fd #cyan
-regular7=bbbbbb #white
-bright0=555555 #bright black
-bright1=ff5555 #bright red
-bright2=50fa7b #bright green
-bright3=f1fa8c #bright yellow
-bright4=bd93f9 #bright blue
-bright5=ff79c6 #bright magenta
-bright6=8be9fd #bright cyan
-bright7=ffffff #bright white
+regular0=000000
+regular1=ff5555
+regular2=50fa7b
+regular3=f1fa8c
+regular4=bd93f9
+regular5=ff79c6
+regular6=8be9fd
+regular7=bbbbbb
+bright0=555555
+bright1=ff5555
+bright2=50fa7b
+bright3=f1fa8c
+bright4=bd93f9
+bright5=ff79c6
+bright6=8be9fd
+bright7=ffffff
+selection-foreground=ffffff
+selection-background=44475a
 ```
 
 # License
