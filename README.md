@@ -49,7 +49,6 @@ colors:
 ```ini
 [cursor]
 color=ffffff bbbbbb
-
 [colors]
 foreground=f8f8f2
 background=1e1f29
