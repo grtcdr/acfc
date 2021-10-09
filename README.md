@@ -1,5 +1,5 @@
 # acfc
-Alacritty Colors to Foot Colors
+[Alacritty](https://github.com/alacritty/alacritty) Colors to [Foot](https://codeberg.org/dnkl/foot) Colors
 
 This tool converts Alacritty's YAML color configuration to Foot's INI color configuration.
 
