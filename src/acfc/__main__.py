@@ -3,7 +3,9 @@
 import sys
 import os
 import yaml
-from colors import *
+import configparser
+from acfc.src.acfc.colors import Colors
+
 
 def main():
     if len(sys.argv) > 1:
