@@ -1,5 +1,5 @@
 import configparser
-from helpers import unpound as up
+from acfc.src.acfc.colors.helpers import unpound as up
 
 
 class Colors:
@@ -75,7 +75,7 @@ class Colors:
 
     def as_foot(self, config: configparser.ConfigParser):
         config['cursor'] = {
-            'color': self.cursor_foreground+' '+self.cursor_background
+            'color': self.cursor_foreground + ' ' + self.cursor_background
         }
         config['colors'] = {
             'foreground': self.primary_foreground,

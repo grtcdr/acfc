@@ -2,12 +2,10 @@
 
 import sys
 import os
-import configparser
 import yaml
-import argparse
-import colors
+from colors import *
 
-if __name__ == '__main__':
+def main():
     if len(sys.argv) > 1:
         yaml_file = sys.argv[1]
 
@@ -19,7 +17,7 @@ if __name__ == '__main__':
 
                     # Print to console
                     for section in colors.sections():
-                        print('['+section+']')
+                        print('[' + section + ']')
                         for item, value in config[section].items():
                             print(item + '=' + value)
 
@@ -29,3 +27,7 @@ if __name__ == '__main__':
             print(yaml_file + ": Not a file.")
     else:
         print("I need a YAML file to parse.")
+
+
+if __name__ == '__main__':
+    main()
