@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 
-import sys
+from sys import argv, exit
 import os
 import yaml
 import configparser
-from acfc.src.acfc.colors import Colors
+
+import helpers
+from src import Colors
 
 
 def main():
-    if len(sys.argv) > 1:
-        yaml_file = sys.argv[1]
+    if len(argv) > 1:
+        yaml_file = argv[1]
 
         if os.path.isfile(yaml_file):
             with open(yaml_file, 'r') as stream:
@@ -32,4 +34,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    exit(main())

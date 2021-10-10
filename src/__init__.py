@@ -1,5 +1,6 @@
 import configparser
-from acfc.src.acfc.colors.helpers import unpound as up
+
+from helpers import unpound as up
 
 
 class Colors:
@@ -74,6 +75,12 @@ class Colors:
                 "This configuration file does not set some required keys.")
 
     def as_foot(self, config: configparser.ConfigParser):
+        """
+        Populates a given ``config`` with proper color values
+
+        :param config: An object containing foot's configuration
+        :return: configparser.ConfigParser
+        """
         config['cursor'] = {
             'color': self.cursor_foreground + ' ' + self.cursor_background
         }
