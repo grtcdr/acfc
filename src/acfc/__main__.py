@@ -5,7 +5,7 @@ import os
 import configparser
 import yaml
 import argparse
-from colors import Colors
+import colors
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
