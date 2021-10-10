@@ -1,6 +1,7 @@
 import configparser
 from helpers import unpound as up
 
+
 class Colors:
     normal_black = ''
     normal_blue = ''
@@ -24,8 +25,8 @@ class Colors:
     primary_foreground = ''
     selection_background = ''
     selection_foreground = ''
-    cursor_background=''
-    cursor_foreground=''
+    cursor_background = ''
+    cursor_foreground = ''
 
     def __init__(self, _dict: dict):
         self.normal_black = up(_dict['colors']['normal']['black'])
@@ -36,7 +37,7 @@ class Colors:
         self.normal_red = up(_dict['colors']['normal']['red'])
         self.normal_yellow = up(_dict['colors']['normal']['yellow'])
         self.normal_white = up(_dict['colors']['normal']['white'])
-        
+
         try:
             self.bright_black = up(_dict['colors']['bright']['black'])
             self.bright_blue = up(_dict['colors']['bright']['blue'])
@@ -58,42 +59,45 @@ class Colors:
             self.bright_white = up(_dict['colors']['normal']['white'])
 
         try:
-            self.primary_background = up(_dict['colors']['primary']['background'])
-            self.primary_foreground = up(_dict['colors']['primary']['foreground'])
-            self.selection_background = up(_dict['colors']['selection']['background'])
-            self.selection_foreground = up(_dict['colors']['selection']['text'])
+            self.primary_background = up(
+                _dict['colors']['primary']['background'])
+            self.primary_foreground = up(
+                _dict['colors']['primary']['foreground'])
+            self.selection_background = up(
+                _dict['colors']['selection']['background'])
+            self.selection_foreground = up(
+                _dict['colors']['selection']['text'])
             self.cursor_background = up(_dict['colors']['cursor']['cursor'])
             self.cursor_foreground = up(_dict['colors']['cursor']['text'])
         except KeyError:
-            raise Exception("This configuration file does not set some required keys.")
-
-
+            raise Exception(
+                "This configuration file does not set some required keys.")
 
     def as_foot(self, config: configparser.ConfigParser):
         config['cursor'] = {
             'color': self.cursor_foreground+' '+self.cursor_background
         }
         config['colors'] = {
-            'foreground':self.primary_foreground,
-            'background':self.primary_background,
-            'regular0':self.normal_black,
-            'regular1':self.normal_red,
-            'regular2':self.normal_green,
-            'regular3':self.normal_yellow,
-            'regular4':self.normal_blue,
-            'regular5':self.normal_magenta,
-            'regular6':self.normal_cyan,
-            'regular7':self.normal_white,
-            'bright0':self.bright_black,
-            'bright1':self.bright_red,
-            'bright2':self.bright_green,
-            'bright3':self.bright_yellow,
-            'bright4':self.bright_blue,
-            'bright5':self.bright_magenta,
-            'bright6':self.bright_cyan,
-            'bright7':self.bright_white,
-            'selection-foreground':self.selection_foreground,
-            'selection-background':self.selection_background,
+            'foreground': self.primary_foreground,
+            'background': self.primary_background,
+            'regular0': self.normal_black,
+            'regular1': self.normal_red,
+            'regular2': self.normal_green,
+            'regular3': self.normal_yellow,
+            'regular4': self.normal_blue,
+            'regular5': self.normal_magenta,
+            'regular6': self.normal_cyan,
+            'regular7': self.normal_white,
+            'bright0': self.bright_black,
+            'bright1': self.bright_red,
+            'bright2': self.bright_green,
+            'bright3': self.bright_yellow,
+            'bright4': self.bright_blue,
+            'bright5': self.bright_magenta,
+            'bright6': self.bright_cyan,
+            'bright7': self.bright_white,
+            'selection-foreground': self.selection_foreground,
+            'selection-background': self.selection_background,
         }
 
         return config

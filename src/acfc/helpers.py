@@ -1,2 +1,2 @@
 def unpound(input: str) -> str:
-    return input.replace('#','').replace('0x','')
+    return input.replace('#', '').replace('0x', '')
