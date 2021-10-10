@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="acfc",
-    version="1.0.3",
+    version="1.1.0",
     author="Aziz Ben Ali",
     author_email="ba.taahaziz@gmail.com",
     description="Alacritty Colors to Foot Colors (Converter)",
