@@ -85,4 +85,4 @@ selection-background=44475a
 
 ## License
 
-This tool is licensed under the MIT license.
+This neat little project is licensed under the MIT license.
