@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from sys import argv, exit
+import sys
 import os
 import yaml
 import configparser
