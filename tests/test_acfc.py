@@ -4,7 +4,7 @@ import os
 
 
 def test_version():
-    assert __version__ == '2.0.4'
+    assert __version__ == '2.1.0'
 
 
 def test_themes_before_conversion():
