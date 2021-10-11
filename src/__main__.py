@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from sys import argv, exit
 import os
@@ -34,4 +34,4 @@ def main():
 
 
 if __name__ == '__main__':
-    exit(main())
+    main()
