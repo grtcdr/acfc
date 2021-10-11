@@ -4,7 +4,6 @@ from sys import argv, exit
 import os
 import yaml
 import configparser
-import helpers
 from acfc.colors import Colors
 
 
