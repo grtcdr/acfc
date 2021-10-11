@@ -1,2 +1,0 @@
-PyYAML>=21.8.3
-configparser>=5.0.2

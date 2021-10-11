@@ -4,9 +4,8 @@ from sys import argv, exit
 import os
 import yaml
 import configparser
-
 import helpers
-from src import Colors
+from acfc.colors import Colors
 
 
 def main():
