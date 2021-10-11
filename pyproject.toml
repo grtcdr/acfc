@@ -1,8 +1,16 @@
 [tool.poetry]
 name = "acfc"
-version = "2.0.1"
+version = "2.0.2"
 description = "Alacritty Colors to Foot Colors (Converter)"
 authors = ["grtcdr <ba.tahaaziz@gmail.com>"]
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: MIT License",
+   "Operating System :: OS Independent",
+   "Topic :: Terminals :: Terminal Emulators/X Terminals",
+   "Topic :: Utilities",
+   "Development Status :: 5 - Production/Stable",
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
