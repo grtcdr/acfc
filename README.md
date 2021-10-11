@@ -4,13 +4,19 @@
 [Foot](https://codeberg.org/dnkl/foot) Colors, convert Alacritty's YAML color
 configuration to Foot's INI color configuration.
 
-## Usage:
+# Installation
+
+```
+pip install acfc
+```
+
+## Usage
 
 acfc accepts only one argument, i.e. a path to a YAML file. It'll then chuck out
 its INI equivalent to the terminal.
 
 ```
-acfc.py input.yml
+python -m acfc input.yml
 ```
 
 - Input:
