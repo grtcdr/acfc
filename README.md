@@ -78,6 +78,6 @@ selection-foreground=ffffff
 selection-background=44475a
 ```
 
-# License
+## License
 
 This tool is licensed under the MIT license.
