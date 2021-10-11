@@ -78,6 +78,11 @@ selection-foreground=ffffff
 selection-background=44475a
 ```
 
+## Thanks to
+
+- [configparser](https://github.com/jaraco/configparser) Jason R. Coombs
+- [pyaml](https://github.com/mk-fg/pretty-yaml) by Mike Kazantsev
+
 ## License
 
 This tool is licensed under the MIT license.
