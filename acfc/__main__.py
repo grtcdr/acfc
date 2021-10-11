@@ -8,8 +8,8 @@ from acfc.colors import Colors
 
 
 def main():
-    if len(argv) > 1:
-        yaml_file = argv[1]
+    if len(sys.argv) > 1:
+        yaml_file = sys.argv[1]
 
         if os.path.isfile(yaml_file):
             with open(yaml_file, 'r') as stream:
@@ -27,8 +27,10 @@ def main():
                     print(exc)
         else:
             print(yaml_file + ": Not a file.")
+            sys.exit(2)
     else:
         print("I need a YAML file to parse.")
+        sys.exit(1)
 
 
 if __name__ == '__main__':
