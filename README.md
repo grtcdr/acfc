@@ -4,7 +4,7 @@
 [Foot](https://codeberg.org/dnkl/foot) Colors, convert Alacritty's YAML color
 configuration to Foot's INI color configuration.
 
-# Installation
+## Installation
 
 ```
 pip install acfc
