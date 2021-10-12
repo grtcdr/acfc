@@ -6,8 +6,7 @@ import yaml
 from acfc import __version__
 from acfc.colors import Colors
 
-themes = ["Atom", "Dracula"]
-
+themes = ["Atom", "Dracula", "MaterialDark", "Breeze"]
 
 def theme_file(current):
     theme_suffix = "/themes/" + current + ".yml"
