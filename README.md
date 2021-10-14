@@ -2,8 +2,8 @@
 
 [![downloads/month](https://img.shields.io/pypi/dm/acfc)](https://pypi.org/project/acfc/)
 
-[Alacritty](https://github.com/alacritty/alacritty) Colors to
-[Foot](https://codeberg.org/dnkl/foot) Colors, convert Alacritty's YAML color
+[Alacritty](https://github.com/alacritty/alacritty) colors to
+[Foot](https://codeberg.org/dnkl/foot) colors — Convert Alacritty's YAML color
 configuration to Foot's INI color configuration.
 
 ## Installation
