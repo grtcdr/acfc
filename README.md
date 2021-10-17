@@ -82,7 +82,7 @@ selection-background=44475a
 
 ## Thanks to
 
-- [configparser](https://github.com/jaraco/configparser) Jason R. Coombs
+- [configparser](https://github.com/jaraco/configparser) by Jason R. Coombs
 - [pyaml](https://github.com/mk-fg/pretty-yaml) by Mike Kazantsev
 
 ## License
