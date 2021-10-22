@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 
-import sys, os, yaml, configparser
+import sys
+import os
+import yaml
+import configparser
+from acfc import __version__
 from acfc.colors import Colors
+
 
 def print_ini(colors, config):
     for section in colors.sections():
@@ -14,6 +19,10 @@ def main():
     config = configparser.ConfigParser()
 
     if not len(sys.argv) > 1:
+        print('acfc, version ' + __version__)
+        print()
+        print('Paste in the Alacritty color configuration and press Ctrl+D as soon as you\'re finished:')
+        print()
         colors = Colors(yaml.safe_load(sys.stdin.read())).as_foot(config)
         sys.exit(print_ini(colors, config))
 
@@ -21,7 +30,7 @@ def main():
     if not os.path.isfile(yaml_file):
         print('"' + yaml_file + '": Not a file.')
         sys.exit(2)
-    
+
     extension = os.path.splitext(yaml_file)[1]
     if extension != ".yml" and extension != ".yaml":
         print('"' + yaml_file + '": Not a YAML file.')

@@ -8,14 +8,15 @@ from acfc.colors import Colors
 
 themes = ["Atom", "Dracula", "MaterialDark", "Breeze"]
 
+
+def test_version():
+    assert __version__ == '2.2.0'
+
+
 def theme_file(current):
     theme_suffix = "/themes/" + current + ".yml"
     file = open(os.path.dirname(__file__) + theme_suffix, 'r')
     return file
-
-
-def test_version():
-    assert __version__ == '2.1.0'
 
 
 def test_bright_black():
