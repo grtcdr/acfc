@@ -3,11 +3,19 @@
 import sys, os, yaml, configparser
 from acfc.colors import Colors
 
+def print_ini(colors, config):
+    for section in colors.sections():
+        print('[' + section + ']')
+        for item, value in config[section].items():
+            print(item + '=' + value)
+
 
 def main():
+    config = configparser.ConfigParser()
+
     if not len(sys.argv) > 1:
-        print('I need a YAML file to parse.')
-        sys.exit(1)
+        colors = Colors(yaml.safe_load(sys.stdin.read())).as_foot(config)
+        sys.exit(print_ini(colors, config))
 
     yaml_file = sys.argv[1]
     if not os.path.isfile(yaml_file):
@@ -21,13 +29,8 @@ def main():
 
     with open(yaml_file, 'r') as stream:
         try:
-            config = configparser.ConfigParser()
             colors = Colors(yaml.safe_load(stream)).as_foot(config)
-                
-            for section in colors.sections():
-                print('[' + section + ']')
-                for item, value in config[section].items():
-                    print(item + '=' + value)
+            print_ini(colors, config)
 
         except yaml.YAMLError as exc:
             print(exc)

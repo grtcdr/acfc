@@ -15,7 +15,7 @@ pip install acfc
 ## Usage
 
 acfc accepts only one argument, i.e. a path to a YAML file. It'll then chuck out
-its INI equivalent to the terminal.
+its INI equivalent to the terminal. It can also read from stdin.
 
 ```
 python -m acfc input.yml

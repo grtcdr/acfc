@@ -29,6 +29,9 @@ class Colors:
     cursor_foreground = ''
 
     def __init__(self, _dict: dict):
+        if not _dict:
+            return None
+        
         self.normal_black = up(_dict['colors']['normal']['black'])
         self.normal_blue = up(_dict['colors']['normal']['blue'])
         self.normal_cyan = up(_dict['colors']['normal']['cyan'])
