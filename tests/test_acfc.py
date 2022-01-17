@@ -10,7 +10,7 @@ themes = ["Atom", "Dracula", "MaterialDark", "Breeze"]
 
 
 def test_version():
-    assert __version__ == '2.2.0'
+    assert __version__ == '2.3.0'
 
 
 def theme_file(current):
@@ -24,7 +24,7 @@ def test_bright_black():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright0'] == colors_yml.bright_black
+            assert colors_ini['colors']['bright0'] == colors_yml.bright.black
 
 
 def test_bright_red():
@@ -32,7 +32,7 @@ def test_bright_red():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright1'] == colors_yml.bright_red
+            assert colors_ini['colors']['bright1'] == colors_yml.bright.red
 
 
 def test_bright_green():
@@ -40,7 +40,7 @@ def test_bright_green():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright2'] == colors_yml.bright_green
+            assert colors_ini['colors']['bright2'] == colors_yml.bright.green
 
 
 def test_bright_yellow():
@@ -48,7 +48,7 @@ def test_bright_yellow():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright3'] == colors_yml.bright_yellow
+            assert colors_ini['colors']['bright3'] == colors_yml.bright.yellow
 
 
 def test_bright_blue():
@@ -56,7 +56,7 @@ def test_bright_blue():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright4'] == colors_yml.bright_blue
+            assert colors_ini['colors']['bright4'] == colors_yml.bright.blue
 
 
 def test_bright_magenta():
@@ -64,7 +64,7 @@ def test_bright_magenta():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright5'] == colors_yml.bright_magenta
+            assert colors_ini['colors']['bright5'] == colors_yml.bright.magenta
 
 
 def test_bright_cyan():
@@ -72,7 +72,7 @@ def test_bright_cyan():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright6'] == colors_yml.bright_cyan
+            assert colors_ini['colors']['bright6'] == colors_yml.bright.cyan
 
 
 def test_bright_white():
@@ -80,7 +80,7 @@ def test_bright_white():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['bright7'] == colors_yml.bright_white
+            assert colors_ini['colors']['bright7'] == colors_yml.bright.white
 
 
 def test_normal_black():
@@ -88,7 +88,7 @@ def test_normal_black():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular0'] == colors_yml.normal_black
+            assert colors_ini['colors']['regular0'] == colors_yml.normal.black
 
 
 def test_normal_red():
@@ -96,7 +96,7 @@ def test_normal_red():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular1'] == colors_yml.normal_red
+            assert colors_ini['colors']['regular1'] == colors_yml.normal.red
 
 
 def test_normal_green():
@@ -104,7 +104,7 @@ def test_normal_green():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular2'] == colors_yml.normal_green
+            assert colors_ini['colors']['regular2'] == colors_yml.normal.green
 
 
 def test_normal_yellow():
@@ -112,7 +112,7 @@ def test_normal_yellow():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular3'] == colors_yml.normal_yellow
+            assert colors_ini['colors']['regular3'] == colors_yml.normal.yellow
 
 
 def test_normal_blue():
@@ -120,7 +120,7 @@ def test_normal_blue():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular4'] == colors_yml.normal_blue
+            assert colors_ini['colors']['regular4'] == colors_yml.normal.blue
 
 
 def test_normal_magenta():
@@ -128,7 +128,7 @@ def test_normal_magenta():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular5'] == colors_yml.normal_magenta
+            assert colors_ini['colors']['regular5'] == colors_yml.normal.magenta
 
 
 def test_normal_cyan():
@@ -136,7 +136,7 @@ def test_normal_cyan():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular6'] == colors_yml.normal_cyan
+            assert colors_ini['colors']['regular6'] == colors_yml.normal.cyan
 
 
 def test_normal_white():
@@ -144,7 +144,7 @@ def test_normal_white():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['regular7'] == colors_yml.normal_white
+            assert colors_ini['colors']['regular7'] == colors_yml.normal.white
 
 
 def test_primary_foreground():
@@ -152,7 +152,7 @@ def test_primary_foreground():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['foreground'] == colors_yml.primary_foreground
+            assert colors_ini['colors']['foreground'] == colors_yml.primary.foreground
 
 
 def test_primary_background():
@@ -160,7 +160,7 @@ def test_primary_background():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['background'] == colors_yml.primary_background
+            assert colors_ini['colors']['background'] == colors_yml.primary.background
 
 
 def test_selection_background():
@@ -168,7 +168,7 @@ def test_selection_background():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['selection-background'] == colors_yml.selection_background
+            assert colors_ini['colors']['selection-background'] == colors_yml.selection.background
 
 
 def test_selection_foreground():
@@ -176,7 +176,7 @@ def test_selection_foreground():
         with theme_file(i) as stream:
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
-            assert colors_ini['colors']['selection-foreground'] == colors_yml.selection_foreground
+            assert colors_ini['colors']['selection-foreground'] == colors_yml.selection.foreground
 
 
 def test_cursor_foreground():
@@ -185,7 +185,7 @@ def test_cursor_foreground():
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
             cursor_colors = colors_ini['cursor']['color'].split(' ', 1)
-            assert cursor_colors[0] == colors_yml.cursor_foreground
+            assert cursor_colors[0] == colors_yml.cursor.foreground
 
 
 def test_cursor_background():
@@ -194,4 +194,4 @@ def test_cursor_background():
             colors_yml = Colors(yaml.safe_load(stream))
             colors_ini = colors_yml.as_foot(configparser.ConfigParser())
             cursor_colors = colors_ini['cursor']['color'].split(' ', 1)
-            assert cursor_colors[1] == colors_yml.cursor_background
+            assert cursor_colors[1] == colors_yml.cursor.background
