@@ -74,8 +74,8 @@ class Colors:
         self.primary.background = self.try_find(colors, 'primary', 'background')
         self.primary.foreground = self.try_find(colors, 'primary', 'foreground')
 
-        self.cursor.background = self.try_find(colors, 'cursor', 'background')
-        self.cursor.foreground = self.try_find(colors, 'cursor', 'foreground')
+        self.cursor.background = self.try_find(colors, 'cursor', 'cursor')
+        self.cursor.foreground = self.try_find(colors, 'cursor', 'text')
 
         self.selection.background = self.try_find(colors, 'selection', 'background')
         self.selection.foreground = self.try_find(colors, 'selection', 'foreground')
@@ -84,9 +84,10 @@ class Colors:
         """
         Populates a given `config` with its appropriate values
         """
-        config['cursor'] = {
-            'color': self.cursor.foreground + ' ' + self.cursor.background
-        }
+        if self.cursor:
+            config['cursor'] = {
+                'color': self.cursor.foreground + ' ' + self.cursor.background
+            }
         config['colors'] = {
             'foreground': self.primary.foreground,
             'background': self.primary.background,
