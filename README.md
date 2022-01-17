@@ -4,7 +4,7 @@
 
 [Alacritty](https://github.com/alacritty/alacritty) colors to
 [Foot](https://codeberg.org/dnkl/foot) colors — Convert Alacritty's YAML color
-configuration to Foot's INI color configuration.
+configuration to Foot's.
 
 ## Installation
 
