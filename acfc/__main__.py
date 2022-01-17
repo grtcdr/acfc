@@ -24,7 +24,7 @@ def main():
 
     print('acfc, version ' + __version__)
     print()
-    print('Paste in the Alacritty color configuration and press Ctrl+D as soon as you\'re finished:')
+    print("Paste in the Alacritty color configuration and press Ctrl+D as soon as you're finished:")
     print()
     colors = Colors(yaml.safe_load(sys.stdin.read())).as_foot(config)
     sys.exit(print_ini(colors, config))
