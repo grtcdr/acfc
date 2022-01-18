@@ -1,6 +1,6 @@
 # acfc
 
-[![downloads/month](https://img.shields.io/pypi/dm/acfc)](https://pypi.org/project/acfc/)
+__Notice__: In an effort to improve this utility and extend its scope beyond what is currently offered, [I have decided to create __dyna__](https://git.sr.ht/~grtcdr/dyna). acfc will no longer receive any new updates.
 
 [Alacritty](https://github.com/alacritty/alacritty) colors to
 [Foot](https://codeberg.org/dnkl/foot) colors — Convert Alacritty's YAML color
